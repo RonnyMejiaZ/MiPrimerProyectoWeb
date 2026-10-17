@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente de fondo con brillo circular suave -->
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0a0f1d" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradiente para el cuerpo de la botella -->
+    <linearGradient id="bottleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Gradiente para el agua / líquido interior -->
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <!-- Gradiente para detalles de tapa y agarre deportivo -->
+    <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+
+    <!-- Brillo y reflejo de cristal -->
+    <linearGradient id="reflectionGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Filtro de sombra suave -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#00f2fe" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Círculo de luz ambiental tech/deportiva -->
+  <circle cx="150" cy="150" r="130" fill="url(#glowGrad)"/>
+
+  <!-- Base / Sombra de la botella -->
+  <ellipse cx="150" cy="265" rx="55" ry="10" fill="#000000" opacity="0.4"/>
+
+  <!-- Tapa deportiva: Boquilla ergonómica -->
+  <rect x="138" y="24" width="24" height="14" rx="4" fill="url(#capGrad)" filter="url(#dropShadow)"/>
+  
+  <!-- Tapa deportiva: Asa de transporte -->
+  <path d="M 125 36 C 125 20, 110 20, 110 36 L 110 46" fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Tapa: Rosca superior -->
+  <rect x="120" y="38" width="60" height="18" rx="6" fill="#334155"/>
+  <rect x="123" y="44" width="54" height="4" rx="2" fill="#00f2fe"/>
+
+  <!-- Cuello de la botella -->
+  <path d="M 128 56 L 172 56 L 180 82 L 120 82 Z" fill="#1e293b"/>
+
+  <!-- Cuerpo principal de la botella (Fondo translúcido) -->
+  <rect x="110" y="82" width="80" height="175" rx="18" fill="url(#bottleGrad)" stroke="#334155" stroke-width="3"/>
+
+  <!-- Zona de Líquido / Hidratación (Nivel de agua con olas) -->
+  <clipPath id="bottleClip">
+    <rect x="112" y="84" width="76" height="171" rx="16"/>
+  </clipPath>
+
+  <g clip-path="url(#bottleClip)">
+    <!-- Bloque de agua -->
+    <path d="M 105 135 
+             Q 130 128, 150 135 
+             T 195 135 
+             L 195 260 
+             L 105 260 Z" 
+          fill="url(#waterGrad)" 
+          opacity="0.9"/>
+    
+    <!-- Onda brillante de agua -->
+    <path d="M 105 137 
+             Q 130 142, 150 137 
+             T 195 137" 
+          fill="none" 
+          stroke="#ffffff" 
+          stroke-width="2.5" 
+          opacity="0.6"/>
+
+    <!-- Burbujas dinámicas de agua -->
+    <circle cx="135" cy="180" r="4" fill="#ffffff" opacity="0.5"/>
+    <circle cx="160" cy="210" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="145" cy="235" r="3" fill="#ffffff" opacity="0.4"/>
+    <circle cx="168" cy="165" r="2.5" fill="#ffffff" opacity="0.5"/>
+
+    <!-- Marcas métricas de volumen (ml) en la botella -->
+    <line x1="172" y1="110" x2="182" y2="110" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="175" y1="130" x2="182" y2="130" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+    <line x1="170" y1="150" x2="182" y2="150" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="175" y1="170" x2="182" y2="170" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <line x1="170" y1="190" x2="182" y2="190" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="175" y1="210" x2="182" y2="210" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- Reflejo lateral vertical (efecto vidrio/plástico premium) -->
+    <rect x="116" y="85" width="14" height="165" rx="7" fill="url(#reflectionGrad)"/>
+  </g>
+
+  <!-- Agarre ergonómico lateral estilo deportivo -->
+  <path d="M 108 120 C 105 125, 105 145, 108 150" fill="none" stroke="#00f2fe" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 108 160 C 105 165, 105 185, 108 190" fill="none" stroke="#00f2fe" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Icono de gota y rayo deportivo en el centro -->
+  <g transform="translate(138, 146)">
+    <!-- Gota estilizada -->
+    <path d="M 12 0 C 12 0, 0 14, 0 20 C 0 26.6 5.4 32 12 32 C 18.6 32 24 26.6 24 20 C 24 14 12 0 12 0 Z" 
+          fill="#ffffff" 
+          opacity="0.95"/>
+    <!-- Detalle de energía interior -->
+    <path d="M 13 8 L 8 18 L 13 18 L 11 26 L 17 16 L 12 16 Z" 
+          fill="#00f2fe"/>
+  </g>
+</svg>

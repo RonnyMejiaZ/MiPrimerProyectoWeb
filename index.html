@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HydroFit: Control y optimización de hidratación deportiva.">
+  <title>HydroFit - Control de Hidratación Deportiva</title>
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Contenedor Principal -->
+  <main class="app-container">
+
+    <!-- Encabezado -->
+    <header class="app-header">
+      <div class="brand-badge">
+        <span class="status-dot"></span> SPORTS PERFORMANCE TECH
+      </div>
+      <h1 class="main-title">
+        Hydro<span class="highlight-cyan">Fit</span>: Optimización de Hidratación Deportiva
+      </h1>
+      <p class="intro-description">
+        Una correcta hidratación es el pilar biológico del rendimiento físico de élite.
+        Durante el <strong>entrenamiento de fuerza</strong> y la actividad cardiovascular, una pérdida
+        de apenas el <strong>2% de peso corporal en agua</strong> reduce la potencia muscular hasta un 15%,
+        ralentiza la síntesis de proteínas y prolonga la fatiga central. Mantener un balance hídrico óptimo
+        acelera la <strong>recuperación muscular</strong>, lubrica las articulaciones y optimiza el transporte
+        de nutrientes esenciales a los tejidos.
+      </p>
+    </header>
+
+    <!-- Disposición Principal -->
+    <div class="tracker-layout">
+
+      <!-- Columna Visual (Botella y Meta) -->
+      <div class="visual-card">
+        <img src="img/hidratacion.svg" alt="Botella deportiva inteligente HydroFit con medidor de agua"
+          id="bottle-image" class="interactive-bottle" width="200" height="200">
+        <div class="daily-goal-pill">
+          <span class="pill-label">🎯 Meta Diaria Recomendada:</span>
+          <span class="pill-value"><strong>8 vasos</strong> (2,000 ml)</span>
+        </div>
+      </div>
+
+      <!-- Sección Interactiva del Contador -->
+      <section class="tracker-section" aria-label="Contador de Hidratación Diario">
+        <div class="section-header">
+          <h2 class="section-title">Registro Diario de Hidratación</h2>
+          <span class="live-tag">En vivo</span>
+        </div>
+
+        <!-- Métricas numéricas -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-label">Consumo Actual</span>
+            <div class="metric-value-group">
+              <span id="current-ml" class="metric-number">0</span>
+              <span class="metric-unit">ml</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-label">Vasos Tomados</span>
+            <div class="metric-value-group">
+              <span id="current-glasses" class="metric-number">0</span>
+              <span class="metric-unit">/ 8</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-label">Progreso</span>
+            <div class="metric-value-group">
+              <span id="percentage-value" class="metric-number">0</span>
+              <span class="metric-unit">%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Barra de Progreso -->
+        <div class="progress-container">
+          <div class="progress-labels">
+            <span>0 ml</span>
+            <span id="progress-indicator-text">0% completado</span>
+            <span>2000 ml</span>
+          </div>
+          <div class="progress-track">
+            <div id="progress-fill" class="progress-bar-fill"></div>
+          </div>
+        </div>
+
+        <!-- Mensaje de Estado -->
+        <div id="status-message" class="status-alert">
+          💡 Comienza tu día bebiendo tu primer vaso para activar tu metabolismo.
+        </div>
+
+        <!-- Botones de Control -->
+        <div class="controls-panel">
+          <button id="btn-add" class="btn btn-primary" type="button">
+            💧 Agregar vaso (+250 ml)
+          </button>
+          <button id="btn-subtract" class="btn btn-secondary" type="button">
+            ➖ Restar vaso
+          </button>
+          <button id="btn-reset" class="btn btn-danger" type="button">
+            🔄 Reiniciar día
+          </button>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Pie de Página -->
+    <footer class="app-footer">
+      <p class="academic-note">
+        Proyecto desarrollado para la cátedra universitaria de Desarrollo Web &bull; <strong>HydroFit</strong> &copy;
+        2026.
+      </p>
+      <p class="resource-link-wrapper">
+        Aprende más sobre la ciencia del balance hidroelectrolítico en el
+        <a href="https://www.fisiologiadelejercicio.com/hidratacion-en-atletas/" target="_blank"
+          rel="noopener noreferrer" class="external-link">
+          Artículo de Hidratación Deportiva &rarr;
+        </a>
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- Lógica JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
